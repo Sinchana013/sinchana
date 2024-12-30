@@ -87,6 +87,8 @@
         li {
             font-size: 1.1em;
             color: #d8c7a0;
+            text-align: left;
+            margin: 10px 0;
         }
 
         /* Fade-in effect for sections */
@@ -98,46 +100,45 @@
                 opacity: 1;
             }
         }
+
         /* Leaves Falling Animation */
-.leaf {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-image: url('https://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.8;
-    animation: fall 10s linear infinite, drift 10s ease-in-out infinite;
-}
+        .leaf {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('https://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+            animation: fall 10s linear infinite, drift 10s ease-in-out infinite;
+        }
 
-/* Falling animation */
-@keyframes fall {
-    0% {
-        top: -10%;
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-    100% {
-        top: 100%;
-        opacity: 0;
-        transform: rotate(360deg);
-    }
-}
+        /* Falling animation */
+        @keyframes fall {
+            0% {
+                top: -10%;
+                opacity: 1;
+                transform: rotate(0deg);
+            }
+            100% {
+                top: 100%;
+                opacity: 0;
+                transform: rotate(360deg);
+            }
+        }
 
-/* Drift animation */
-@keyframes drift {
-    0% {
-        left: 0%;
-    }
-    50% {
-        left: 50%;
-    }
-    100% {
-        left: 100%;
-    }
-}
-
-        
+        /* Drift animation */
+        @keyframes drift {
+            0% {
+                left: 0%;
+            }
+            50% {
+                left: 50%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -156,65 +157,33 @@
 </header>
 
 <section>
-
     <!-- Learning Reflections Section -->
     <div class="text-section">
         <h1>Course Learning Reflections</h1>
         <p>Throughout this course, I have gained deep insights into algorithmic design and problem-solving techniques, which I can apply in real-world scenarios. Here are some of the key reflections:</p>
 
-        <h2>1. Iteration, Recursion, and Backtracking</h2>
-        <p> we encounter itteration in natural phenomenons like cell division and we also see recurrsion type fibonacci Sequence in Plant Growth.</p>
+        <h2>1. BRTS Ticket Verification</h2>
+        <ul>
+            <li>Dynamic Data Handling: Learned to use a <code>vector</code> to store and manage passenger ticket details dynamically, ensuring scalability for fluctuating data.</li>
+            <li>Formatted Output: Implemented structured and readable output using formatting tools like <code>setw</code> for clear data presentation.</li>
+            <li>Real-time Input: Gained experience in capturing and validating user input in a loop, simulating real-time ticket scanning and storage.</li>
+            <li>Input Handling: Learned to handle edge cases with <code>cin.ignore</code> to avoid input stream issues during data entry.</li>
+        </ul>
 
-        <h2>2. Space and Time Efficiency</h2>
-        <p>Space and time efficiency are critical in algorithm design to optimize system performance. Time efficiency (how fast an algorithm runs) and space efficiency (how much memory it uses) are vital in tackling large-scale problems. Classifying problems into linear, logarithmic, quadratic, and exponential growth helps assess their scalability and makes easy to judge a algorithm as good .</p>
-
-        <h2>3. Design Principles</h2>
-        <p> Divide and Conquer solves problems by breaking them into smaller subproblems, solving each independently, and combining the results. The Greedy Method focuses on making the best local choice at each step, with the hope of finding the global optimum. Dynamic Programming optimizes problems by storing the results of overlapping subproblems to avoid redundant calculations. Backtracking systematically explores all possible solutions and backtracks when it reaches an unsatisfactory state, making it useful for combinatorial problems.</p>
-
-        <h2>4. Trees and Hierarchical Data Structures</h2>
-        <p>Trees and hierarchical data structures like BST, AVL, and Red-Black trees optimize search, insertion, and deletion, ensuring efficient handling of dynamic data.</p>
-
-        <h2>5. Array Query Algorithms</h2>
-        <p>Array query algorithms, like binary search and range queries, have applications in databases and optimization, improving efficiency in searching and processing large datasets.</p>
-
-        <h2>6. Trees vs. Graphs</h2>
-        <p>Trees represent hierarchical relationships, while graphs are more general structures used in networks. Traversals like DFS and BFS are critical in applications like routing and network analysis.</p>
-
-        <h2>7. Sorting and Searching Algorithms</h2>
-        <p>Sorting and searching algorithms are essential for organizing and accessing data, with real-world applications in search engines, e-commerce, and databases.</p>
-
-        <h2>8. Graph Algorithms</h2>
-        <p>Graph algorithms, like Dijkstra's for shortest paths and Prim’s for spanning trees, are crucial for applications in navigation, network design, and resource management.</p>
-
-        <h2>9. Algorithm Design Techniques</h2>
-        <p>Algorithm design techniques such as Divide and Conquer, Dynamic Programming, and Greedy algorithms help optimize problem-solving by reducing complexity and ensuring efficient solutions.</p>
-
-        <h2>10. Time and Space Complexity Considerations</h2>
-        <p>To determine the most efficient approach, consider time and space complexity and the nature of the problem—balancing trade-offs between simplicity and optimization is crucial.</p>
-
-        <h2>11. Evaluating Solutions</h2>
-        <p>Evaluating a solution’s effectiveness involves testing it under various conditions and measuring its performance based on predefined criteria.</p>
-
-        <h2>12. Adaptation of Solutions</h2>
-        <p>Adaptation of existing solutions requires identifying the problem’s evolving needs and modifying the approach while maintaining efficiency.</p>
-
-        <h2>13. Identifying Patterns in Data</h2>
-        <p>Identifying patterns in data involves techniques like clustering and classification, which simplify problem-solving and provide insights.</p>
-
-        <h2>14. Breaking Down Complex Problems</h2>
-        <p>Breaking down complex problems into smaller components allows for a clearer understanding and systematic approach to solving each sub-problem.</p>
-
-        <h2>15. Trade-offs in Approaches</h2>
-        <p>When choosing between approaches, consider their trade-offs in terms of complexity, time, space, and context.</p>
+        <h2>2. Ticket Management and Retrieval System</h2>
+        <ul>
+            <li>Data Organization: Designed the <code>Passenger</code> class to encapsulate ticket details such as name, source, destination, and ticket price, making data structured and manageable.</li>
+            <li>Display Mechanism: Implemented a method to display stored ticket data, focusing on concise and clear representation.</li>
+            <li>Iterative Access: Used loops to iterate over the vector and retrieve all stored tickets, simulating a basic search or retrieval mechanism.</li>
+        </ul>
     </div>
 
     <!-- Leaves Falling Animation -->
-<div class="leaf" style="top: 0%; left: 10%; animation-duration: 8s; animation-delay: 0s;"></div>
-<div class="leaf" style="top: 0%; left: 25%; animation-duration: 6s; animation-delay: 0s;"></div>
-<div class="leaf" style="top: 0%; left: 53%; animation-duration: 6s; animation-delay: 0s;"></div>
-<div class="leaf" style="top: 0%; left: 30%; animation-duration: 12s; animation-delay: 0s;"></div>
-<div class="leaf" style="top: 0%; left: 70%; animation-duration: 9s; animation-delay: 0s;"></div>
-
+    <div class="leaf" style="top: 0%; left: 10%; animation-duration: 8s; animation-delay: 0s;"></div>
+    <div class="leaf" style="top: 0%; left: 25%; animation-duration: 6s; animation-delay: 0s;"></div>
+    <div class="leaf" style="top: 0%; left: 53%; animation-duration: 6s; animation-delay: 0s;"></div>
+    <div class="leaf" style="top: 0%; left: 30%; animation-duration: 12s; animation-delay: 0s;"></div>
+    <div class="leaf" style="top: 0%; left: 70%; animation-duration: 9s; animation-delay: 0s;"></div>
 </section>
 
 </body>
