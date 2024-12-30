@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Project Introduction</title>
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #222222; /* Set consistent background color */
+            color: #decab0; /* Beige color for text */
+            overflow-y: scroll;
+            height: 100vh;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #222222; /* Match body background color */
+            color: #f5d1a3; /* Lighter beige for header text */
+            text-align: center;
+            padding: 20px 15px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #e0ca87; /* Beige color for navigation */
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            color: #ebe5df; /* Highlight on hover */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Courgette', cursive;
+        }
+
+        .content {
+            padding: 20px 15px;
+            max-width: 900px;
+            margin: 0 auto;
+            color: #decab0; /* Beige color for content */
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 20px;
+            font-family: 'Courgette', cursive;
+            color: #f0e2b6; /* Lighter beige for section headings */
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: #d1a456;
+        }
+
+        h4 {
+            font-size: 1.1em;
+            margin-top: 10px;
+            color: #d1a079;
+        }
+
+        p, ul {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #e3d7b9; /* Soft beige for paragraphs */
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #222222; /* Match body background */
+            color: #f5d1a3; /* Beige footer text */
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* Leaves Falling Animation */
+        .leaf {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('https://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+            animation: fall 10s linear infinite, drift 10s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -10%;
+                opacity: 1;
+                transform: rotate(0deg);
+            }
+            100% {
+                top: 100%;
+                opacity: 0;
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes drift {
+            0% {
+                left: calc(10% + (90% * random()));
+            }
+            100% {
+                left: calc(10% + (90% * random()));
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1  style="color: pink;">Sinchana SM's Portfolio - Team 05 </h1>
+    <h2>Opened page: Course Introduction</h2>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="course-project-introduction.html">Course Project Introduction</a>
+        <a href="learning-reflections.html">Learning Reflections</a>
+        <a href="student-details.html">Student Details</a>
+    </nav>
+</header>
+
+<div class="content">
+    <h2>What Design and Analysis of Algorithm Course is All About?</h2>
+    <h4>Overview of the Course</h4>
+    <p>The <strong>Design and Analysis of Algorithms (DAA)</strong> course teaches how to create efficient algorithms and evaluate their performance. Key areas include:</p>
+    
+    <h4>Key Topics:</h4>
+    <ul>
+        <li><strong>Data Structures:</strong> Understanding arrays, stacks, queues, trees, and graphs.</li>
+        <li><strong>Algorithm Design:</strong> Techniques like Divide and Conquer, Dynamic Programming, Greedy Algorithms, and Backtracking.</li>
+        <li><strong>Analysis:</strong> Assessing time and space complexity (Big-O notation).</li>
+        <li><strong>Problem Solving:</strong> Solving problems like shortest paths, optimization, and pattern matching.</li>
+        <li><strong>Applications:</strong> Applying algorithms in real-world scenarios such as routing, database indexing, and task scheduling.</li>
+    </ul>
+
+    <h4>Importance:</h4>
+    <p>The course builds the foundation for solving computational problems efficiently in software development and beyond.</p>
+
+    <h2>What Kind of Data Structures and Algorithms Have You Studied?</h2>
+    <h4>Data Structures</h4>
+    <ul>
+        <li>Arrays</li>
+        <li>Stacks</li>
+        <li>Queues</li>
+        <li>Linked Lists</li>
+        <li>Trees</li>
+        <li>Graphs</li>
+        <li>Heaps</li>
+        <li>Advanced structures like Tries, Fenwick Trees, Segment Trees, and Skip Lists</li>
+    </ul>
+
+    <h4>Algorithms</h4>
+    <ul>
+        <li>Sorting and Searching: Organizing data (Bubble Sort, Quick Sort, Merge Sort) and finding items (Binary Search, KMP Algorithm)</li>
+        <li>Graph Algorithms: Shortest path algorithms (Dijkstra’s, Bellman-Ford) and Minimum Spanning Trees (Prim’s, Kruskal’s)</li>
+        <li>Pathfinding: Algorithms to determine routes (Floyd-Warshall)</li>
+        <li>Optimization Problems: Knapsack, Travelling Salesperson Problem, and Huffman Coding</li>
+        <li>Recursion and Backtracking: Problem-solving using function calls (N-Queens Problem)</li>
+        <li>String Matching: Algorithms like Rabin-Karp, Boyer-Moore, and Brute Force for searching patterns in text</li>
+        <li>Divide and Conquer: Techniques like Merge Sort and Strassen’s Matrix Multiplication</li>
+        <li>Dynamic Programming: Solving problems by breaking them into overlapping subproblems (Fibonacci, Longest Common Subsequence)</li>
+        <li>Undecidability: Understanding problems that can't be solved algorithmically (Halting Problem)</li>
+    </ul>
+</div>
+
+<footer>
+    <p>© 2024 Sinchana SM. All Rights Reserved.</p>
+</footer>
+
+<!-- Leaves Falling Animation -->
+<div class="leaf" style="top: 0%; left: 10%; animation-duration: 8s; animation-delay: 0s;"></div>
+<div class="leaf" style="top: 0%; left: 25%; animation-duration: 6s; animation-delay: 0s;"></div>
+<div class="leaf" style="top: 0%; left: 53%; animation-duration: 6s; animation-delay: 0s;"></div>
+<div class="leaf" style="top: 0%; left: 30%; animation-duration: 12s; animation-delay: 0s;"></div>
+<div class="leaf" style="top: 0%; left: 70%; animation-duration: 9s; animation-delay: 0s;"></div>
+
+</body>
+</html>

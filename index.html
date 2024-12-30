@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinchana SM Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        section {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background: radial-gradient(#333, #000);
+        }
+
+        /* Styling for the header */
+        header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 10px;
+            z-index: 10; /* Ensure header is on top */
+        }
+
+        header h1 {
+            font-family: 'Courgette', cursive;
+            font-size: 2.5em;
+            color: #ff5722;
+            margin: 0;
+        }
+
+        /* Navigation menu inside header */
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: rgb(208, 124, 51);
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* Button Styling */
+        .course-introduction-btn {
+            background-color: #ff5722;
+            color: rgb(208, 124, 51);
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .course-introduction-btn:hover {
+            background-color: #ffcc00;
+        }
+
+        /* Leaf falling animation */
+        .leaf {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .leaf div, .petal div {
+            position: absolute;
+            display: block;
+        }
+
+        .leaf div:nth-child(1) {
+            left: 20%;
+            animation: fall 15s linear infinite;
+            animation-delay: -2s;
+        }
+
+        .leaf div:nth-child(2) {
+            left: 70%;
+            animation: fall 15s linear infinite;
+            animation-delay: -4s;
+        }
+
+        .leaf div:nth-child(3) {
+            left: 10%;
+            animation: fall 20s linear infinite;
+            animation-delay: -7s;
+        }
+
+        .leaf div:nth-child(4) {
+            left: 50%;
+            animation: fall 18s linear infinite;
+            animation-delay: -5s;
+        }
+
+        .leaf div:nth-child(5) {
+            left: 85%;
+            animation: fall 14s linear infinite;
+            animation-delay: -5s;
+        }
+
+        .leaf div:nth-child(6) {
+            left: 15%;
+            animation: fall 16s linear infinite;
+            animation-delay: -10s;
+        }
+
+        .leaf div:nth-child(7) {
+            left: 90%;
+            animation: fall 15s linear infinite;
+            animation-delay: -4s;
+        }
+
+        .petal div {
+            width: 60px;
+            height: 60px;
+            background-color: #FF5722;
+            border-radius: 50%;
+            animation: fallPetal 8s linear infinite;
+            opacity: 3;
+        }
+
+        .petal div:nth-child(1) {
+            left: 25%;
+            animation-delay: -1s;
+        }
+
+        .petal div:nth-child(2) {
+            left: 75%;
+            animation-delay: -2s;
+        }
+
+        .petal div:nth-child(3) {
+            left: 35%;
+            animation-delay: -3s;
+        }
+
+        .petal div:nth-child(4) {
+            left: 50%;
+            animation-delay: -4s;
+        }
+
+        .petal div:nth-child(5) {
+            left: 80%;
+            animation-delay: -5s;
+        }
+
+        
+
+        @keyframes fall {
+            0% {
+                opacity: 1;
+                top: -10%;
+                transform: translateX(20px) rotate(0deg);
+            }
+
+            100% {
+                opacity: 0;
+                top: 110%;
+                transform: translateX(-20px) rotate(225deg);
+            }
+        }
+
+        @keyframes fallPetal {
+            0% {
+                opacity: 1;
+                top: -10%;
+                left: 25%;
+                transform: translateX(20px) rotate(0deg);
+            }
+
+            100% {
+                opacity: 0;
+                top: 110%;
+                transform: translateX(30px) rotate(360deg);
+            }
+        }
+
+        h2 {
+            position: absolute;
+            top: 40%;
+            width: 100%;
+            font-family: 'Courgette', cursive;
+            font-size: 4em;
+            text-align: center;
+            color: #efd5a3;
+            transform: translateY(-50%);
+        }
+        
+
+        
+
+        .bubble {
+            position: absolute;
+            background-color:#FF4500;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: bubblePop 2s forwards;
+            opacity: 1;
+        }
+
+        @keyframes bubblePop {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+            80% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 0.6;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+        }
+
+        .text {
+            font-family: 'Courgette', cursive;
+            font-size: 3em;
+            color: #efd5a3;
+            position: absolute;
+            top: 38%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation: textAppear 1s forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes textAppear {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section with Navigation -->
+<header>
+    <h1 style="color: pink;">Sinchana SM's Portfolio</h1>
+
+    <!-- Added button -->
+    
+
+    <nav>
+        <a href="course-introduction.html">Course Introduction</a>
+        <a href="course-project-introduction.html">Course Project Introduction</a>
+        <a href="learning-reflections.html">Learning Reflections</a>
+        <a href="student-details.html">Student Details</a>
+    </nav>
+</header>
+
+<section>
+    <br>
+    <br><br>
+    <h2></h2>
+
+    <!-- Leaf animation -->
+    <div class="leaf">
+        <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="80px" width="80px" /></div>
+        <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="80px" width="80px" /></div>
+        <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="80px" width="80px" /></div>
+        <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="80px" width="80px" /></div>
+        <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="80px" width="80px" /></div>
+        <div><img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="80px" width="80px" /></div>
+        <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="80px" width="80px" /></div>
+    </div>
+
+    <!-- Petals falling animation -->
+    <div class="petal">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="bubble"></div>
+    <div class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to ....<br> Sinchana SM's DAA Portfolio </div>
+</section>
+
+</body>
+</html>
