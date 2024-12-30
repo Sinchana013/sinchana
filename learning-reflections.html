@@ -170,6 +170,47 @@
             font-family: monospace;
         }
 
+        .beige-box {
+            width: 45%;
+            height: 150px;
+            background-color: #decab0;
+            color: #333;
+            font-size: 1.2em;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transform: translateY(100px);
+            opacity: 0;
+            animation: slideIn 1.5s forwards;
+        }
+
+        .beige-box:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+
+        .beige-box:nth-child(2) {
+            animation-delay: 1s;
+        }
+        /* Slide In Animation */
+@keyframes slideIn {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.beige-box {
+    animation: slideIn 1.5s forwards;
+}
+
         /* Falling animation */
         @keyframes fall {
             0% {
@@ -338,14 +379,14 @@
                 <button class="run-btn">Run Code</button>
                 <div class="output">
                     <h4>Output :</h4>
-                    <p>Ticket 101 scanned in successfully.
-                        Ticket 102 scanned in successfully.
-                        Ticket 103 scanned in successfully.
-                        Current Heap: 101 102 103 
-                        Ticket 102 scanned out successfully.
-                        Current Heap: 101 103 
-                        Access Denied
-                        Current Heap: 101 103 
+                    <p>Ticket 101 scanned in successfully.<br>
+                        Ticket 102 scanned in successfully.<br>
+                        Ticket 103 scanned in successfully.<br>
+                        Current Heap: 101 102 103 <br>
+                        Ticket 102 scanned out successfully.<br>
+                        Current Heap: 101 103 <br>
+                        Access Denied<br>
+                        Current Heap: 101 103 <br>
                         </p>
                 </div>
             </div>
@@ -478,7 +519,14 @@
                         Travel Date: 2024-12-25<br>
                         Status: Confirmed</p>
                 </div>
+                
             </div>
+        </div>
+        <!-- Beige Boxes -->
+        <div class="beige-box"><h2> SDG's for Business Case 01</h2>
+        <p><strong>SDG 9: </strong>Industry, Innovation, and Infrastructure<br><strong> SDG 8:</strong> Decent Work and Economic Growth </p></div>
+        <div class="beige-box"><h2> SDG's for Business Case 02 </h2>
+            <p> <strong>SDG 11:</strong> Sustainable Cities and Communities<br><strong> SDG 9: </strong>Industry, Innovation, and Infrastructure</p>
         </div>
     </div>
 </section>
