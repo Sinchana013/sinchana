@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinchana SM Portfolio - Team</title>
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        body, h1, h2, p, li {
+            text-align: left;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: black;
+            color: #decab0; /* Beige text color */
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        section {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            background: radial-gradient(#333, #000);
+        }
+
+        /* Styling for the header */
+        header {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 20px;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-family: 'Courgette', cursive;
+            font-size: 2.5em;
+            color: #f39072;
+            margin: 0;
+        }
+
+        header h2 {
+            font-size: 1.5em;
+            color: #decab0;
+            margin: 5px 0;
+        }
+
+        /* Navigation menu inside header */
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: rgb(226, 168, 118);
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* Paragraphs section styling */
+        .text-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .text-section h1,
+        .text-section h2 {
+            color: #bb988e;
+        }
+
+        .text-section p {
+            font-size: 1.2em;
+            margin: 20px 0;
+            line-height: 1.6;
+            color: #d8c7a0;
+        }
+
+        li {
+            font-size: 1.1em;
+            color: #d8c7a0;
+        }
+
+        /* Team section styling */
+        .team-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .team-section h2 {
+            font-family: 'Courgette', cursive;
+            font-size: 3em;
+            color: #efd5a3;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 1s;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .team-member {
+            width: 20%;
+            padding: 20px;
+            background-color: rgba(29, 20, 20, 0.7);
+            border-radius: 10px;
+            border: 2px solid #f0e6e3;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(241, 236, 234, 0.8);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #44403e;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        .team-member img:hover {
+            border-color: #3a3a35;
+        }
+
+        .team-member p {
+            font-size: 1em;
+            margin-top: 5px;
+            color: #decab0;
+        }
+
+         /* Leaves Falling Animation */
+         .leaf {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('https://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+            animation: fall 10s linear infinite, drift 10s linear infinite;
+        }
+        @keyframes fall {
+            0% {
+                top: -10%;
+                opacity: 1;
+                transform: rotate(0deg);
+            }
+            100% {
+                top: 100%;
+                opacity: 0;
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes drift {
+            0% {
+                left: calc(10% + (90% * random()));
+            }
+            100% {
+                left: calc(10% + (90% * random()));
+            }
+        }
+        /* Fade-in effect for team members */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Header Section with Navigation -->
+<header>
+    <h1 style="color: pink;">Sinchana SM's Portfolio - Team 05 </h1>
+    <h2>Opened page : Course Project Introduction</h2>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="course-introduction.html">Course Introduction</a>
+        <a href="learning-reflections.html">Learning Reflections</a>
+        <a href="student-details.html">Student Details</a>
+    </nav>
+    
+</header>
+
+<section>
+
+    <!-- Image Section (content) -->
+    <div class="image-section">
+        <!-- Background image of the section -->
+    </div>
+
+    <!-- Paragraph Section below the image -->
+    <div class="text-section">
+        <h1>Problem Statement</h1>
+        <p>The accelerating pace of urbanization and the growing need for efficient public transportation demand innovative solutions for e-transportation platforms. These platforms must leverage smart technologies to improve user experiences, streamline operations, and promote sustainable transportation practices.</p>
+        
+        <h2>Objectives</h2>
+        <ul>
+            <li>Leverage fundamental data structures like arrays and queues to efficiently manage and process transportation data.</li>
+            <li>Enhance efficiency and reliability of transportation operations.</li>
+            <li>Improve user convenience by addressing pain points in ticketing, traffic management, and seat allocation.</li>
+            <li>Utilize advanced algorithms like Dijkstra's, the Travelling Salesman Problem, and modern data structures to solve domain-specific challenges.</li>
+        </ul>
+
+        <h2>Working on Problem Space</h2>
+        <p>As a smart city with modern civilization, transportation is vital and necessary. Improved and easy transportation is well-wished, so we aimed for that.</p>
+        <p>As a city with more area and a larger population, managing travel data is quite challenging. We decided to take it up as our business case. The trend nowadays is e-bookings, so managing the data generated during online booking is also essential.</p>
+
+        <h2>Business Cases</h2>
+
+        <div class="business-case">
+            <h2>1. BRTS Ticket Verification</h2>
+            <p><strong>Description:</strong> A secure system for verifying tickets using QR codes, RFID cards, or physical passes.</p>
+            <ul>
+                <li>Real-time ticket validation with alerts for invalid or expired tickets.</li>
+                <li>QR code and RFID-based scanning for seamless verification.</li>
+                <li>Usage logs generated for audits and analytics.</li>
+            </ul>
+        </div>
+
+        <div class="business-case">
+            <h2>2. Traffic Signal Management</h2>
+            <p><strong>Description:</strong> An intelligent system to regulate traffic flow at intersections using sensors and real-time data.</p>
+            <ul>
+                <li>Dynamic signal timing adjustments based on traffic density detected by sensors.</li>
+                <li>Priority allocation for emergency vehicles at intersections.</li>
+                <li>Centralized integration for monitoring and controlling traffic flow.</li>
+            </ul>
+        </div>
+
+        <div class="business-case">
+            <h2>3. Automated Seat Allocation for Public Transport</h2>
+            <p><strong>Description:</strong> A system to manage and allocate seats efficiently based on user preferences and availability.</p>
+            <ul>
+                <li>Automated seat assignment and management of real-time seat availability.</li>
+                <li>Waiting list handling with notifications for seat confirmations or updates.</li>
+                <li>User-friendly interface for booking preferences and status tracking.</li>
+            </ul>
+        </div>
+
+        <div class="business-case">
+            <h2>4. Shortest Path Finder</h2>
+            <p><strong>Description:</strong> A feature to calculate the shortest route or time between two transit stops.</p>
+            <ul>
+                <li>Interactive selection of source and destination with visualized maps.</li>
+                <li>Route optimization using algorithms like Dijkstra for efficient travel.</li>
+                <li>Display of estimated travel time and distance for user convenience.</li>
+            </ul>
+        </div>
+
+        <div class="business-case">
+            <h2>5. Optimized Waste Collection and Disposal</h2>
+            <p><strong>Description:</strong> A system for planning and optimizing waste collection and disposal routes.</p>
+            <ul>
+                <li>Route optimization using the Traveling Salesman Problem (TSP).</li>
+                <li>Real-time tracking and management of waste collection vehicles.</li>
+                <li>Analytical tools to improve resource utilization, reducing time and fuel.</li>
+            </ul>
+        </div>
+
+        <div class="business-case">
+            <h2>6. Ticket Management and Retrieval System</h2>
+            <p><strong>Description:</strong> A system to retrieve and manage details of previously booked tickets.</p>
+            <ul>
+                <li>Search tickets using parameters like ID, name, or travel date.</li>
+                <li>Sorting and filtering options for efficient result display.</li>
+                <li>Integration with booking systems to show ticket details and status updates.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Team Information Section -->
+    <div class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="sinchana.jpg" alt="Sinchana" />
+                <p>Sinchana</p>
+                <p>USN: 01FE23BCS192</p>
+                <p>ROLL NO: 409</p>
+                <p>Handled problem statement: </p>
+            </div>
+            <div class="team-member">
+                <img src="deepika.jpg" alt="Deepika" />
+                <p>Deepika</p>
+                <p>USN: 01FE23BCS181</p>
+                <p>ROLL NO: 421</p>
+                <p>Handled problem statement: </p>
+            </div>
+            <div class="team-member">
+                <img src="nisha.jpg" alt="Nisha" />
+                <p>Nisha</p>
+                <p>USN: 01FE23BCS18</p>
+                <p>ROLL NO: 428</p>
+                <p>Handled problem statement: </p>
+            </div>
+            <div class="team-member">
+                <img src="namrutha.jpg" alt="Namrutha" />
+                <p>Namrutha</p>
+                <p>USN: 01FE23BCS18</p>
+                <p>ROLL NO: 436</p>
+                <p>Handled problem statement: </p>
+            </div>
+        </div>
+    </div>
+<!-- Leaves Falling Animation -->
+<div class="leaf" style="top: 0%; left: 10%; animation-duration: 18s; animation-delay: 0s;"></div>
+<div class="leaf" style="top: 0%; left: 25%; animation-duration: 16s; animation-delay: 0s;"></div>
+<div class="leaf" style="top: 0%; left: 53%; animation-duration: 16s; animation-delay: 0s;"></div>
+<div class="leaf" style="top: 0%; left: 30%; animation-duration: 12s; animation-delay: 0s;"></div>
+<div class="leaf" style="top: 0%; left: 70%; animation-duration: 19s; animation-delay: 0s;"></div>
+
+
+</section>
+
+</body>
+</html>
