@@ -233,6 +233,7 @@
             }
         }
 
+       
         .text {
             font-family: 'Courgette', cursive;
             font-size: 3em;
@@ -254,6 +255,32 @@
                 opacity: 1;
             }
         }
+
+        .button1 {
+            text-align: center; /* Center-aligns the button */
+            margin-top: 30%; /* Adds some space above the button */
+            position: relative; /* Ensures proper stacking */
+            z-index: 10; /* Higher value to bring it above the image */
+        }
+        
+        .button1 button {
+            background-color: #007BFF; /* Blue background */
+            color: white; /* White text */
+            border: none; /* Removes default border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 20px; /* Adds padding for size */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            position: relative; /* Ensure button respects parent stacking context */
+            z-index: 10; /* Ensure button stays on top */
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+        
+        .button1 button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        
+        
     </style>
 </head>
 <body>
@@ -266,11 +293,11 @@
     
 
     <nav>
+        <a href="index.html">Home</a>
         <a href="course-introduction.html">Course Introduction</a>
         <a href="course-project-introduction.html">Course Project Introduction</a>
         <a href="learning-reflections.html">Learning Reflections</a>
         <a href="student-details.html">Student Details</a>
-        <a href="business.html">Business Case</a>
     </nav>
 </header>
 
@@ -298,10 +325,15 @@
         <div></div>
         <div></div>
     </div>
+    <div class="button1">
+    <a href="code.html">
+    <button>code</button>
+</a>
+</div>
 
-    <div class="bubble"></div>
-    <div class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to ....<br> Sinchana SM's DAA Portfolio </div>
+
 </section>
+
 
 </body>
 </html>
