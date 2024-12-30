@@ -66,6 +66,34 @@
             color: #ffcc00;
         }
 
+        .business-cases {
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .business-case {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #444;
+            border-radius: 8px;
+            background-color: #333;
+        }
+
+        .business-case h3 {
+            margin-bottom: 10px;
+        }
+
+        .business-case ul {
+            margin-left: 20px;
+            list-style-type: square;
+        }
+
+        .business-case p {
+            color: #d8c7a0;
+        }
+
         /* Paragraphs section styling */
         .text-section {
             text-align: center;
@@ -89,55 +117,86 @@
             color: #d8c7a0;
         }
 
-        /* Fade-in effect for sections */
-        @keyframes fadeIn {
+        /* Code editor styling */
+        .code-editor {
+            position: relative;
+            background-color: #2d2d2d;
+            padding: 20px;
+            border-radius: 10px;
+            color: #f8f8f2;
+            font-size: 16px;
+            overflow: auto;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: 300px;
+            border: 2px solid #333;
+        }
+
+        pre {
+            margin: 0;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .run-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        .run-btn:hover {
+            background-color: #45a049;
+        }
+
+        .run-btn:active {
+            background-color: #3e8e41;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #333;
+            color: #f8f8f2;
+            border-radius: 10px;
+            font-family: monospace;
+        }
+
+        /* Falling animation */
+        @keyframes fall {
             0% {
-                opacity: 0;
+                top: -10%;
+                opacity: 1;
+                transform: rotate(0deg);
             }
             100% {
-                opacity: 1;
+                top: 100%;
+                opacity: 0;
+                transform: rotate(360deg);
             }
         }
-        /* Leaves Falling Animation */
-.leaf {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-image: url('https://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.8;
-    animation: fall 10s linear infinite, drift 10s ease-in-out infinite;
-}
 
-/* Falling animation */
-@keyframes fall {
-    0% {
-        top: -10%;
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-    100% {
-        top: 100%;
-        opacity: 0;
-        transform: rotate(360deg);
-    }
-}
+        /* Drift animation */
+        @keyframes drift {
+            0% {
+                left: 0%;
+            }
+            50% {
+                left: 50%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
 
-/* Drift animation */
-@keyframes drift {
-    0% {
-        left: 0%;
-    }
-    50% {
-        left: 50%;
-    }
-    100% {
-        left: 100%;
-    }
-}
-
-        
     </style>
 </head>
 <body>
@@ -145,14 +204,14 @@
 <!-- Header Section with Navigation -->
 <header>
     <h1 style="color: pink;">Sinchana SM's Portfolio - Learning Reflections</h1>
-    <h2>Opened page : Learning Reflections</h2>
+    <h2>Opened page : My Business Cases</h2>
 
     <nav>
         <a href="index.html">Home</a>
         <a href="course-introduction.html">Course Introduction</a>
         <a href="course-project-introduction.html">Course Project Introduction</a>
         <a href="student-details.html">Student Details</a>
-        <a href="business.html">Business Case</a>
+        
     </nav>
 </header>
 
@@ -160,56 +219,271 @@
 
     <!-- Learning Reflections Section -->
     <div class="text-section">
-        <h1>Course Learning Reflections</h1>
-        <p>Throughout this course, I have gained deep insights into algorithmic design and problem-solving techniques, which I can apply in real-world scenarios. Here are some of the key reflections:</p>
-
-        <h2>1. Iteration, Recursion, and Backtracking</h2>
-        <p> we encounter itteration in natural phenomenons like cell division and we also see recurrsion type fibonacci Sequence in Plant Growth.</p>
-
-        <h2>2. Space and Time Efficiency</h2>
-        <p>Space and time efficiency are critical in algorithm design to optimize system performance. Time efficiency (how fast an algorithm runs) and space efficiency (how much memory it uses) are vital in tackling large-scale problems. Classifying problems into linear, logarithmic, quadratic, and exponential growth helps assess their scalability and makes easy to judge a algorithm as good .</p>
-
-        <h2>3. Design Principles</h2>
-        <p> Divide and Conquer solves problems by breaking them into smaller subproblems, solving each independently, and combining the results. The Greedy Method focuses on making the best local choice at each step, with the hope of finding the global optimum. Dynamic Programming optimizes problems by storing the results of overlapping subproblems to avoid redundant calculations. Backtracking systematically explores all possible solutions and backtracks when it reaches an unsatisfactory state, making it useful for combinatorial problems.</p>
-
-        <h2>4. Trees and Hierarchical Data Structures</h2>
-        <p>Trees and hierarchical data structures like BST, AVL, and Red-Black trees optimize search, insertion, and deletion, ensuring efficient handling of dynamic data.</p>
-
-        <h2>5. Array Query Algorithms</h2>
-        <p>Array query algorithms, like binary search and range queries, have applications in databases and optimization, improving efficiency in searching and processing large datasets.</p>
-
-        <h2>6. Trees vs. Graphs</h2>
-        <p>Trees represent hierarchical relationships, while graphs are more general structures used in networks. Traversals like DFS and BFS are critical in applications like routing and network analysis.</p>
-
-        <h2>7. Sorting and Searching Algorithms</h2>
-        <p>Sorting and searching algorithms are essential for organizing and accessing data, with real-world applications in search engines, e-commerce, and databases.</p>
-
-        <h2>8. Graph Algorithms</h2>
-        <p>Graph algorithms, like Dijkstra's for shortest paths and Prim’s for spanning trees, are crucial for applications in navigation, network design, and resource management.</p>
-
-        <h2>9. Algorithm Design Techniques</h2>
-        <p>Algorithm design techniques such as Divide and Conquer, Dynamic Programming, and Greedy algorithms help optimize problem-solving by reducing complexity and ensuring efficient solutions.</p>
-
-        <h2>10. Time and Space Complexity Considerations</h2>
-        <p>To determine the most efficient approach, consider time and space complexity and the nature of the problem—balancing trade-offs between simplicity and optimization is crucial.</p>
-
-        <h2>11. Evaluating Solutions</h2>
-        <p>Evaluating a solution’s effectiveness involves testing it under various conditions and measuring its performance based on predefined criteria.</p>
-
-        <h2>12. Adaptation of Solutions</h2>
-        <p>Adaptation of existing solutions requires identifying the problem’s evolving needs and modifying the approach while maintaining efficiency.</p>
-
-        <h2>13. Identifying Patterns in Data</h2>
-        <p>Identifying patterns in data involves techniques like clustering and classification, which simplify problem-solving and provide insights.</p>
-
-        <h2>14. Breaking Down Complex Problems</h2>
-        <p>Breaking down complex problems into smaller components allows for a clearer understanding and systematic approach to solving each sub-problem.</p>
-
-        <h2>15. Trade-offs in Approaches</h2>
-        <p>When choosing between approaches, consider their trade-offs in terms of complexity, time, space, and context.</p>
+        <h1>Problem Statement</h1>
+        <p>The rapid urbanization and increasing demand for efficient public transportation necessitate advanced solutions for e-transportation platforms. These platforms need to integrate smart technologies to enhance user experience, optimize operations, and ensure sustainable transportation practices.</p>
     </div>
 
-    <!-- Leaves Falling Animation -->
+    <!-- Business Cases Section -->
+    <div class="business-cases">
+        <h2 style="text-align: center; color: #f39072;">Business Cases</h2>
+
+        <!-- Business Case 1 -->
+        <div class="business-case">
+            <h3 style="color: rgb(232, 126, 126);">Business Case 1: BRTS ticket scanning</h3>
+            <p>Description: Verifies ticket using QR codes, RFID cards, or physical passes for efficient and secure travel.</p>
+            <ul>
+                <li>As the tickets are scanned in, they are put into a heap and then while scanning at the entrance, we use heap's search function to check if the person has a valid ticket.</li><br>
+                <li>We could have also used other data structures, but we have chosen a heap for best results.</li><br>
+                <li>Search is done efficiently in heaps compared to other data structures.</li><br>
+                <li>Whenever the person scans out, their ticket node should be deleted.</li><br>
+                <li>Heap provides a very efficient deletion function, making it suitable for this case.</li><br>
+            </ul>
+
+            <!-- Code Editor for Business Case 1 -->
+            <div class="code-editor">
+                <h4>Code for Business Case 1</h4>
+                <pre>#include <iostream>
+                    #include <vector>
+                    #include <algorithm>
+                    
+                    using namespace std;
+                    
+                    // Define the structure for the heap
+                    class TicketHeap {
+                    private:
+                        vector<int> heap;  // Vector to store the heap (ticket IDs)
+                    
+                        // Helper function to maintain the heap property (min-heap)
+                        void heapify_up(int index) {
+                            while (index > 0 && heap[index] < heap[(index - 1) / 2]) {
+                                swap(heap[index], heap[(index - 1) / 2]);
+                                index = (index - 1) / 2;
+                            }
+                        }
+                    
+                        void heapify_down(int index) {
+                            int leftChild = 2 * index + 1;
+                            int rightChild = 2 * index + 2;
+                            int smallest = index;
+                    
+                            if (leftChild < heap.size() && heap[leftChild] < heap[smallest]) {
+                                smallest = leftChild;
+                            }
+                    
+                            if (rightChild < heap.size() && heap[rightChild] < heap[smallest]) {
+                                smallest = rightChild;
+                            }
+                    
+                            if (smallest != index) {
+                                swap(heap[index], heap[smallest]);
+                                heapify_down(smallest);
+                            }
+                        }
+                    
+                    public:
+                        // Function to scan in and add ticket to the heap
+                        void scanIn(int ticketId) {
+                            heap.push_back(ticketId);
+                            heapify_up(heap.size() - 1);
+                            cout << "Ticket " << ticketId << " scanned in successfully." << endl;
+                        }
+                    
+                        // Function to scan out and remove ticket from the heap
+                        void scanOut(int ticketId) {
+                            auto it = find(heap.begin(), heap.end(), ticketId);
+                            
+                            if (it == heap.end()) {
+                                cout << "Access Denied" << endl;
+                                return;
+                            }
+                    
+                            // Remove the ticket from heap
+                            int index = it - heap.begin();
+                            swap(heap[index], heap[heap.size() - 1]);
+                            heap.pop_back();
+                            heapify_down(index);
+                    
+                            cout << "Ticket " << ticketId << " scanned out successfully." << endl;
+                        }
+                    
+                        // Display the heap for debugging or testing
+                        void displayHeap() {
+                            cout << "Current Heap: ";
+                            for (int i = 0; i < heap.size(); ++i) {
+                                cout << heap[i] << " ";
+                            }
+                            cout << endl;
+                        }
+                    };
+                    
+                    int main() {
+                        TicketHeap ticketSystem;
+                    
+                        // Simulating ticket scanning
+                        ticketSystem.scanIn(101); // Scanning in ticket 101
+                        ticketSystem.scanIn(102); // Scanning in ticket 102
+                        ticketSystem.scanIn(103); // Scanning in ticket 103
+                    
+                        ticketSystem.displayHeap();
+                    
+                        ticketSystem.scanOut(102); // Scanning out ticket 102
+                        ticketSystem.displayHeap();
+                    
+                        ticketSystem.scanOut(105); // Attempting to scan out non-existent ticket 105
+                        ticketSystem.displayHeap();
+                    
+                        return 0;
+                    }
+                    </pre>
+                <button class="run-btn">Run Code</button>
+                <div class="output">
+                    <h4>Output :</h4>
+                    <p>Ticket 101 scanned in successfully.
+                        Ticket 102 scanned in successfully.
+                        Ticket 103 scanned in successfully.
+                        Current Heap: 101 102 103 
+                        Ticket 102 scanned out successfully.
+                        Current Heap: 101 103 
+                        Access Denied
+                        Current Heap: 101 103 
+                        </p>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+
+        <!-- Business Case 2 -->
+        <div class="business-case">
+            <h3 style="color: rgb(232, 126, 126);">Business Case 2: Booked Ticket Search</h3>
+            <p>Description: A search system to allow users to retrieve previously booked ticket details.</p>
+            <ul>
+                <li>Here the task is to retrieve the data based on ticket ID.</li><br>
+                <li>Why KMP? It's not the case that we can only implement KMP for this solution. We can use many other algorithms we studied too.</li><br>
+                <li>But the vital property we need is its efficiency and ability to match strings for larger string lengths.</li><br>
+                <li>KMP ensures efficient search even with large datasets by avoiding unnecessary re-comparisons.</li><br>
+                <li>KMP handles partial searches efficiently by utilizing its LPS array for faster matching.</li><br>
+                <li>So clearly, KMP algorithm has an upper hand in solving the task.</li><br>
+            </ul>
+
+            <!-- Code Editor for Business Case 2 -->
+            <div class="code-editor">
+                <h4>Code for Business Case 2</h4>
+                <pre>#include 
+                    #include 
+                    #include 
+                    
+                    using namespace std;
+                    
+                    // Function to compute the LPS (Longest Prefix Suffix) array for KMP algorithm
+                    vector computeLPSArray(const string &pattern) {
+                        int m = pattern.length();
+                        vector lps(m, 0);
+                        int length = 0; // Length of the previous longest prefix suffix
+                        int i = 1;
+                    
+                        while (i < m) {
+                            if (pattern[i] == pattern[length]) {
+                                length++;
+                                lps[i] = length;
+                                i++;
+                            } else {
+                                if (length != 0) {
+                                    length = lps[length - 1];
+                                } else {
+                                    lps[i] = 0;
+                                    i++;
+                                }
+                            }
+                        }
+                        return lps;
+                    }
+                    
+                    // KMP String Matching Algorithm
+                    bool KMPSearch(const string &text, const string &pattern) {
+                        int n = text.length();
+                        int m = pattern.length();
+                        vector lps = computeLPSArray(pattern);
+                    
+                        int i = 0; // Index for text
+                        int j = 0; // Index for pattern
+                        while (i < n) {
+                            if (pattern[j] == text[i]) {
+                                i++;
+                                j++;
+                            }
+                            if (j == m) {
+                                return true; // Pattern found in text
+                            } else if (i < n && pattern[j] != text[i]) {
+                                if (j != 0) {
+                                    j = lps[j - 1];
+                                } else {
+                                    i++;
+                                }
+                            }
+                        }
+                        return false;
+                    }
+                    
+                    // Structure to store ticket details
+                    struct Ticket {
+                        string ticketID;
+                        string userName;
+                        string travelDate;
+                        string status; // e.g., confirmed, canceled
+                    };
+                    
+                    // Function to search tickets
+                    void searchTickets(const vector &tickets, const string &query) {
+                        cout << "Search Results for \"" << query << "\":\n";
+                        bool found = false;
+                    
+                        for (const auto &ticket : tickets) {
+                            if (KMPSearch(ticket.ticketID, query) || KMPSearch(ticket.userName, query) || KMPSearch(ticket.travelDate, query)) {
+                                found = true;
+                                cout << "Ticket ID: " << ticket.ticketID << "\n"
+                                     << "User Name: " << ticket.userName << "\n"
+                                     << "Travel Date: " << ticket.travelDate << "\n"
+                                     << "Status: " << ticket.status << "\n\n";
+                            }
+                        }
+                    
+                        if (!found) {
+                            cout << "No tickets match the search query.\n";
+                        }
+                    }
+                    
+                    int main() {
+                        // Sample ticket data
+                       // Sample ticket data
+                        vector tickets = {
+                            {"T12345", "Nisha", "2024-12-01", "Confirmed"},
+                            {"T67890", "Deepika", "2024-12-15", "Canceled"},
+                            {"T54321", "Namrutha", "2024-12-20", "Confirmed"},
+                            {"T98765", "Sinchana", "2024-12-25", "Confirmed"}
+                        };
+                    
+                        // Hardcoded search query
+                        string query = "Alice";
+                    
+                        searchTickets(tickets, query);
+                    
+                        return 0;
+                    }</pre>
+                <button class="run-btn">Run Code</button>
+                <div class="output">
+                    <h4>Output :</h4>
+                    <p>Simulated Output:<br> Search Results for "Sinchana":<br>
+                        Ticket ID: T98765<br>
+                        User Name: Sinchana<br>
+                        Travel Date: 2024-12-25<br>
+                        Status: Confirmed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Leaves Falling Animation -->
 <div class="leaf" style="top: 0%; left: 10%; animation-duration: 8s; animation-delay: 0s;"></div>
 <div class="leaf" style="top: 0%; left: 25%; animation-duration: 6s; animation-delay: 0s;"></div>
 <div class="leaf" style="top: 0%; left: 53%; animation-duration: 6s; animation-delay: 0s;"></div>
